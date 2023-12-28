@@ -1,1 +1,11 @@
-Creat a hello_cloud.service file
+#Create a hello_cloud.service file
+
+[unit]
+After=network.target
+
+[service]
+ExecStart= /usr/local/bin/hello_cloud.py 80
+
+[install]
+WantedBy=default.target
+
